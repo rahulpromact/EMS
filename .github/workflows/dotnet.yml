@@ -21,10 +21,10 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./EMS.sln
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ./EMS.sln --configuration Release --no-restore
       
     - name: Publish
-      run: dotnet publish --configuration Release --no-build
+      run: dotnet publish ./EMS.sln --configuration Release --no-build
